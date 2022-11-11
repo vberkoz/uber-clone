@@ -1,13 +1,14 @@
 import tw from 'twrnc'
 import React from 'react'
-import { GOOGLE_MAPS_APIKEY } from '@env'
 import { StyleSheet, View, SafeAreaView, Image } from 'react-native'
+
+import { GOOGLE_MAPS_APIKEY } from '@env'
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete'
 
+import { useDispatch } from 'react-redux'
 import { setDestination, setOrigin } from '../slices/navSlice'
 
 import NavOptions from '../components/NavOptions'
-import { useDispatch } from 'react-redux'
 
 const HomeScreen = () => {
   const dispatch = useDispatch()
